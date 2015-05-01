@@ -22,6 +22,8 @@ class CWarningTest: NSObject {
     }
     
     func test2() {
-        
+        var force = true
+        if !force {
+        }
     }
 }

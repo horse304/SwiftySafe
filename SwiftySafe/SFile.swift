@@ -74,6 +74,9 @@ class SFile: NSObject {
         //remove !=
         modifiedContent = modifiedContent.stringByReplacingOccurrencesOfString("!=", withString: "XX", options: nil, range: Range(start: modifiedContent.startIndex, end: modifiedContent.endIndex))
         
+        //remove " !"
+        modifiedContent = modifiedContent.stringByReplacingOccurrencesOfString(" !", withString: "XX", options: nil, range: Range(start: modifiedContent.startIndex, end: modifiedContent.endIndex))
+        
         //remove all strings
         var error:NSError?
         var regexQuotes = NSRegularExpression(pattern: "(\".*?\")", options: .DotMatchesLineSeparators, error: &error)
