@@ -11,14 +11,14 @@ import Cocoa
 class CWarningTest: NSObject {
     //Coming some really! bad code
     
-    func test() {
+    func test3() {
+        var x: Int?
         
-        var x: String?
+        if x!.hashValue == 8 {
+            x = x!+1
+            x = x!
+        }
         
-        var y = x!;
-        
-        //bla!
-        println("test!!! abc")
     }
     
     func test2() {
@@ -26,4 +26,15 @@ class CWarningTest: NSObject {
         if !force {
         }
     }
+    
+    func test() {
+        
+        var x: String?
+        
+        var y = x!;
+        
+        println("test!!!")
+    }
+    
+    
 }

@@ -22,20 +22,11 @@ class CWarningTest2: NSObject {
         
         /*
 
-        Will we also find this one?! hahaha
+        Will we also find this?! 
         */
     }
     
-    func test3() {
-        var x: Int?
-        
-        if x!.hashValue == 8 {
-            //move this
-            x = x!+1
-            x = x!
-        }
-        
-    }
+    
     
     func test5() {
         var a: String?
