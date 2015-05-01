@@ -12,7 +12,7 @@ import AppKit
 class SUtility: NSObject {
     static let sharedInstance = SUtility()
     
-//    var tooltipViewController: TooltipViewController?
+    //    var tooltipViewController: TooltipViewController?
     
     class func currentEditor() -> AnyObject? {
         if let workspaceController = SUtility.currentWorkspaceController() {
@@ -20,6 +20,20 @@ class SUtility: NSObject {
             var editorContent = editorArea.lastActiveEditorContext()
             return editorContent.editor()
         }
+        return nil
+    }
+    
+    class func currentSourceCodeEditor() -> IDESourceCodeDocument? {
+        if let editor: AnyObject = self.currentEditor() {
+            if let sourcCodeEditor = editor as? IDESourceCodeEditor {
+                return sourcCodeEditor.sourceCodeDocument()
+            } else if let comparisonEditor = editor as? IDESourceCodeComparisonEditor {
+                if let sourcCodeDocument = comparisonEditor.primaryDocument as? IDESourceCodeDocument {
+                    return sourcCodeDocument
+                }
+            }
+        }
+        
         return nil
     }
     
@@ -108,23 +122,23 @@ class SUtility: NSObject {
                 
                 
                 
-//                var activeRange = textView.layoutManager?.glyphRangeForCharacterRange(range, actualCharacterRange: nil)
-//                var neededRect = textView.layoutManager?.boundingRectForGlyphRange(activeRange!, inTextContainer: textView.textContainer!)
-//                var containerOrigin = textView.textContainerOrigin
-//                
-//                neededRect?.origin.x += containerOrigin.x
-//                neededRect?.origin.y += containerOrigin.y
-//                
-//                neededRect = textView.convertRectToLayer(neededRect!)
-//                var bundle = NSBundle(forClass:object_getClass(self))
-//                
-//                if let viewController = TooltipViewController(nibName: "TooltipViewController", bundle:bundle) {
-//                    tooltipViewController = viewController
-//                    viewController.warning = warning
-//                    viewController.view.frame = NSMakeRect(neededRect!.origin.x, neededRect!.origin.y, 100, 100)
-//                    
-//                    textView.addSubview(viewController.view)
-//                }
+                //                var activeRange = textView.layoutManager?.glyphRangeForCharacterRange(range, actualCharacterRange: nil)
+                //                var neededRect = textView.layoutManager?.boundingRectForGlyphRange(activeRange!, inTextContainer: textView.textContainer!)
+                //                var containerOrigin = textView.textContainerOrigin
+                //
+                //                neededRect?.origin.x += containerOrigin.x
+                //                neededRect?.origin.y += containerOrigin.y
+                //
+                //                neededRect = textView.convertRectToLayer(neededRect!)
+                //                var bundle = NSBundle(forClass:object_getClass(self))
+                //
+                //                if let viewController = TooltipViewController(nibName: "TooltipViewController", bundle:bundle) {
+                //                    tooltipViewController = viewController
+                //                    viewController.warning = warning
+                //                    viewController.view.frame = NSMakeRect(neededRect!.origin.x, neededRect!.origin.y, 100, 100)
+                //
+                //                    textView.addSubview(viewController.view)
+                //                }
             }
         }
     }
@@ -153,7 +167,7 @@ class SUtility: NSObject {
                                 advance(position.startIndex, 4)
                             }
                             
-
+                            
                         }
                         
                         
@@ -168,22 +182,18 @@ class SUtility: NSObject {
         
         if let currentWindowController = SUtility.currentWorkspaceController() {
             if let appDelegate = NSApplication.sharedApplication().delegate {
-                if appDelegate.application!(NSApplication.sharedApplication(), openFile: warning.absolutePath()) {
-                    if let editor: AnyObject = SUtility.currentEditor() {
-                        if editor.respondsToSelector("textView") {
-                            if let textView = editor.textView {
-                                self.highlightWarning(warning, textView: textView!)
-                                
-                            }
+                var result = appDelegate.application?(NSApplication.sharedApplication(), openFile: warning.absolutePath())
+                if result != nil && result == true {
+                    if let editor = SUtility.currentEditor() as? IDESourceCodeEditor{
+                        var x = editor.textView
+                        if let textView = editor.textView {
+                            self.highlightWarning(warning, textView: textView)
                         }
                     }
-
                 }
-                
-                
             }
-
+            
         }
-
+        
     }
 }

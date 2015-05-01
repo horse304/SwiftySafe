@@ -27,10 +27,12 @@ class SPluginWindowController: NSWindowController {
     }
     
     func refresh() {
-        files = SUtility.findWarnings(self.projectDir!)
-        
-        outlineView?.reloadData()
-        outlineView?.expandItem(nil, expandChildren: true)
+        if let projectDir = self.projectDir {
+            files = SUtility.findWarnings(projectDir)
+            
+            outlineView?.reloadData()
+            outlineView?.expandItem(nil, expandChildren: true)
+        }
     }
     
     @IBAction func pressedRefresh(sender: AnyObject) {

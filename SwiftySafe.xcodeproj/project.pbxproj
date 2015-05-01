@@ -20,6 +20,9 @@
 		5974B0A01AF3B7940073DD02 /* TooltipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5974B0881AF3B0F10073DD02 /* TooltipViewController.xib */; };
 		5974B0A11AF3B7980073DD02 /* SFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5974B0821AF3B07C0073DD02 /* SFile.swift */; };
 		5974B0A21AF3B79B0073DD02 /* SUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5974B0831AF3B07C0073DD02 /* SUtility.swift */; };
+		599F3C181AF3C7A300897DD4 /* IDESourceEditor in Frameworks */ = {isa = PBXBuildFile; fileRef = 599F3C171AF3C7A300897DD4 /* IDESourceEditor */; };
+		59C519281AF3C2B500E3AE88 /* CWarningTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C519261AF3C2B500E3AE88 /* CWarningTest.swift */; };
+		59C519291AF3C2B500E3AE88 /* CWarningTest2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C519271AF3C2B500E3AE88 /* CWarningTest2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +39,13 @@
 		5974B0831AF3B07C0073DD02 /* SUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SUtility.swift; sourceTree = "<group>"; };
 		5974B0871AF3B0F10073DD02 /* TooltipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TooltipViewController.swift; sourceTree = "<group>"; };
 		5974B0881AF3B0F10073DD02 /* TooltipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TooltipViewController.xib; sourceTree = "<group>"; };
-		5974B08D1AF3B12A0073DD02 /* DVTFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVTFoundation.framework; path = ../../../../../Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework; sourceTree = "<group>"; };
-		5974B08F1AF3B1300073DD02 /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
-		5974B0901AF3B1300073DD02 /* IDEFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEFoundation.framework; path = ../../../../../Applications/Xcode.app/Contents/Frameworks/IDEFoundation.framework; sourceTree = "<group>"; };
-		5974B0911AF3B1300073DD02 /* DVTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVTKit.framework; path = ../../../../../Applications/Xcode.app/Contents/SharedFrameworks/DVTKit.framework; sourceTree = "<group>"; };
+		5974B08D1AF3B12A0073DD02 /* DVTFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVTFoundation.framework; path = ../SharedFrameworks/DVTFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		5974B08F1AF3B1300073DD02 /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../Frameworks/IDEKit.framework; sourceTree = DEVELOPER_DIR; };
+		5974B0901AF3B1300073DD02 /* IDEFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEFoundation.framework; path = ../Frameworks/IDEFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		5974B0911AF3B1300073DD02 /* DVTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVTKit.framework; path = ../SharedFrameworks/DVTKit.framework; sourceTree = DEVELOPER_DIR; };
+		599F3C171AF3C7A300897DD4 /* IDESourceEditor */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = IDESourceEditor; path = ../PlugIns/IDESourceEditor.ideplugin/Contents/MacOS/IDESourceEditor; sourceTree = DEVELOPER_DIR; };
+		59C519261AF3C2B500E3AE88 /* CWarningTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CWarningTest.swift; path = "code examples/CWarningTest.swift"; sourceTree = "<group>"; };
+		59C519271AF3C2B500E3AE88 /* CWarningTest2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CWarningTest2.swift; path = "code examples/CWarningTest2.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,10 +53,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5974B0941AF3B1300073DD02 /* DVTKit.framework in Frameworks */,
 				5974B08E1AF3B12A0073DD02 /* DVTFoundation.framework in Frameworks */,
 				5974B0921AF3B1300073DD02 /* IDEKit.framework in Frameworks */,
+				599F3C181AF3C7A300897DD4 /* IDESourceEditor in Frameworks */,
 				5974B0931AF3B1300073DD02 /* IDEFoundation.framework in Frameworks */,
-				5974B0941AF3B1300073DD02 /* DVTKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +67,7 @@
 		5974B0631AF3A6270073DD02 = {
 			isa = PBXGroup;
 			children = (
+				599F3C171AF3C7A300897DD4 /* IDESourceEditor */,
 				5974B08F1AF3B1300073DD02 /* IDEKit.framework */,
 				5974B0901AF3B1300073DD02 /* IDEFoundation.framework */,
 				5974B0911AF3B1300073DD02 /* DVTKit.framework */,
@@ -89,6 +97,7 @@
 				5974B0821AF3B07C0073DD02 /* SFile.swift */,
 				5974B0831AF3B07C0073DD02 /* SUtility.swift */,
 				5974B0791AF3A9790073DD02 /* IDEHeader.h */,
+				59C5192A1AF3C2B900E3AE88 /* Bad Code */,
 				5974B06E1AF3A6270073DD02 /* Supporting Files */,
 				5974B07A1AF3A98C0073DD02 /* SwiftySafe-Bridging-Header.h */,
 			);
@@ -102,6 +111,15 @@
 				5974B0701AF3A6270073DD02 /* SwiftySafe.xcscheme */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		59C5192A1AF3C2B900E3AE88 /* Bad Code */ = {
+			isa = PBXGroup;
+			children = (
+				59C519261AF3C2B500E3AE88 /* CWarningTest.swift */,
+				59C519271AF3C2B500E3AE88 /* CWarningTest2.swift */,
+			);
+			name = "Bad Code";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,9 +192,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5974B09B1AF3B6C40073DD02 /* SwiftySafe.swift in Sources */,
+				59C519291AF3C2B500E3AE88 /* CWarningTest2.swift in Sources */,
 				5974B0A21AF3B79B0073DD02 /* SUtility.swift in Sources */,
 				5974B09F1AF3B7910073DD02 /* TooltipViewController.swift in Sources */,
 				5974B09D1AF3B78B0073DD02 /* SPluginWindowController.swift in Sources */,
+				59C519281AF3C2B500E3AE88 /* CWarningTest.swift in Sources */,
 				5974B0A11AF3B7980073DD02 /* SFile.swift in Sources */,
 				5974B09C1AF3B7020073DD02 /* SWarning.swift in Sources */,
 			);
@@ -274,6 +294,10 @@
 				INFOPLIST_FILE = SwiftySafe/Info.plist;
 				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
 				LD_RUNPATH_SEARCH_PATHS = "$(DT_TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/PlugIns/IDESourceEditor.ideplugin/Contents/MacOS",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftySafe/SwiftySafe-Bridging-Header.h";
@@ -298,6 +322,10 @@
 				INFOPLIST_FILE = SwiftySafe/Info.plist;
 				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
 				LD_RUNPATH_SEARCH_PATHS = "$(DT_TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/PlugIns/IDESourceEditor.ideplugin/Contents/MacOS",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftySafe/SwiftySafe-Bridging-Header.h";
@@ -324,6 +352,7 @@
 				5974B0781AF3A6270073DD02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
