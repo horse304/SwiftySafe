@@ -21,6 +21,8 @@
 		5974B0A11AF3B7980073DD02 /* SFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5974B0821AF3B07C0073DD02 /* SFile.swift */; };
 		5974B0A21AF3B79B0073DD02 /* SUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5974B0831AF3B07C0073DD02 /* SUtility.swift */; };
 		599F3C181AF3C7A300897DD4 /* IDESourceEditor in Frameworks */ = {isa = PBXBuildFile; fileRef = 599F3C171AF3C7A300897DD4 /* IDESourceEditor */; };
+		59BDD6231AFB3A06009299AF /* SSEmptyObjCClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BDD6221AFB3A06009299AF /* SSEmptyObjCClass.m */; };
+		59BDD6251AFB3A29009299AF /* SwiftySafePluginExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BDD6241AFB3A29009299AF /* SwiftySafePluginExtension.swift */; };
 		59C519281AF3C2B500E3AE88 /* CWarningTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C519261AF3C2B500E3AE88 /* CWarningTest.swift */; };
 		59C519291AF3C2B500E3AE88 /* CWarningTest2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C519271AF3C2B500E3AE88 /* CWarningTest2.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +46,9 @@
 		5974B0901AF3B1300073DD02 /* IDEFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEFoundation.framework; path = ../Frameworks/IDEFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		5974B0911AF3B1300073DD02 /* DVTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVTKit.framework; path = ../SharedFrameworks/DVTKit.framework; sourceTree = DEVELOPER_DIR; };
 		599F3C171AF3C7A300897DD4 /* IDESourceEditor */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = IDESourceEditor; path = ../PlugIns/IDESourceEditor.ideplugin/Contents/MacOS/IDESourceEditor; sourceTree = DEVELOPER_DIR; };
+		59BDD6211AFB3A06009299AF /* SSEmptyObjCClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSEmptyObjCClass.h; sourceTree = "<group>"; };
+		59BDD6221AFB3A06009299AF /* SSEmptyObjCClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSEmptyObjCClass.m; sourceTree = "<group>"; };
+		59BDD6241AFB3A29009299AF /* SwiftySafePluginExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftySafePluginExtension.swift; sourceTree = "<group>"; };
 		59C519261AF3C2B500E3AE88 /* CWarningTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CWarningTest.swift; path = "code examples/CWarningTest.swift"; sourceTree = "<group>"; };
 		59C519271AF3C2B500E3AE88 /* CWarningTest2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CWarningTest2.swift; path = "code examples/CWarningTest2.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +93,8 @@
 		5974B06D1AF3A6270073DD02 /* SwiftySafe */ = {
 			isa = PBXGroup;
 			children = (
+				59BDD6211AFB3A06009299AF /* SSEmptyObjCClass.h */,
+				59BDD6221AFB3A06009299AF /* SSEmptyObjCClass.m */,
 				5974B0721AF3A6270073DD02 /* SwiftySafe.swift */,
 				5974B07D1AF3B0590073DD02 /* SPluginWindowController.swift */,
 				5974B07E1AF3B0590073DD02 /* SPluginWindowController.xib */,
@@ -96,6 +103,7 @@
 				5974B0811AF3B07C0073DD02 /* SWarning.swift */,
 				5974B0821AF3B07C0073DD02 /* SFile.swift */,
 				5974B0831AF3B07C0073DD02 /* SUtility.swift */,
+				59BDD6241AFB3A29009299AF /* SwiftySafePluginExtension.swift */,
 				5974B0791AF3A9790073DD02 /* IDEHeader.h */,
 				59C5192A1AF3C2B900E3AE88 /* Bad Code */,
 				5974B06E1AF3A6270073DD02 /* Supporting Files */,
@@ -195,6 +203,8 @@
 				59C519291AF3C2B500E3AE88 /* CWarningTest2.swift in Sources */,
 				5974B0A21AF3B79B0073DD02 /* SUtility.swift in Sources */,
 				5974B09F1AF3B7910073DD02 /* TooltipViewController.swift in Sources */,
+				59BDD6231AFB3A06009299AF /* SSEmptyObjCClass.m in Sources */,
+				59BDD6251AFB3A29009299AF /* SwiftySafePluginExtension.swift in Sources */,
 				5974B09D1AF3B78B0073DD02 /* SPluginWindowController.swift in Sources */,
 				59C519281AF3C2B500E3AE88 /* CWarningTest.swift in Sources */,
 				5974B0A11AF3B7980073DD02 /* SFile.swift in Sources */,

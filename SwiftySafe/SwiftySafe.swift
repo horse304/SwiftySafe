@@ -13,12 +13,12 @@ class SwiftySafe: NSObject {
     var bundle: NSBundle
     var windowController: SPluginWindowController?
     
-    class func pluginDidLoad(bundle: NSBundle) {
-        let appName = NSBundle.mainBundle().infoDictionary?["CFBundleName"] as? NSString
-        if appName == "Xcode" {
-            sharedPlugin = SwiftySafe(bundle: bundle)
-        }
-    }
+//    override class func pluginDidLoad(bundle: NSBundle) {
+//        let appName = NSBundle.mainBundle().infoDictionary?["CFBundleName"] as? NSString
+//        if appName == "Xcode" {
+//            sharedPlugin = SwiftySafe(bundle: bundle)
+//        }
+//    }
 
     init(bundle: NSBundle) {
         self.bundle = bundle
